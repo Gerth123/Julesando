@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Julesando</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fonts.css" />
+  </head>
+  <body onload="showOffer()">
+    <header>
+      <div class="iconAndName">
+        <img class="icon" src="png/icon.png" alt="Lieferando Icon" />
+        <h1>Julesando</h1>
+      </div>
+      <span class="cardAsHeadline">Speisekarte</span>
+      <div>
+        <img
+          class="germanFlag"
+          src="png/germanflag.png"
+          alt="Deutsche Flagge"
+        /><img class="menuPng" src="png/menu.png" alt="Menüleiste" />
+      </div>
+    </header>
+    <div class="bodyContainer">
+      <div class="offerAndTopSectionContainer" id="offerAndTopSectionContainer">
+        <div class="topSectionContainer">
+          <img src="img/startImg.jpg" alt="Wok" class="startImg" />
+          <div class="topDescription">
+            <div class="headlineAndOpenBasketPngContainer">
+              <h2 class="headline">Bowls für Jedermann</h2>
+            </div>
+            <div class="starsAndRatingAndOpenBasketContainer">
+              <div class="starsAndRatingContainer">
+                <div class="starsContainer">
+                  <img class="ratingStars" src="png/star.png" alt="Stern" />
+                  <img class="ratingStars" src="png/star.png" alt="Stern" />
+                  <img class="ratingStars" src="png/star.png" alt="Stern" />
+                  <img class="ratingStars" src="png/star.png" alt="Stern" />
+                  <img class="ratingStars" src="png/star.png" alt="Stern" />
+                </div>
+                <span class="ratings">120 Bewertungen</span>
+              </div>
+              <img
+                class="openBasketPng"
+                src="png/shopping-bag.png"
+                alt="Warenkorb öffnen"
+                onclick="openBasket()"
+              />
+            </div>
+            <span class="welcomeText">
+              Herzlich Willkommen auf unserer Julesando-Seite!
+            </span>
+          </div>
+        </div>
+        <div id="offer" class="offer"></div>
+      </div>
+      <div id="basketContainerEmpty" class="basketContainerEmpty">
+        <div class="basketFirstHeadlineAndCloseBasketPngContainer">
+          <h2 class="basketFirstHeadline">Warenkorb</h2>
+          <img
+            class="closeBasketPng"
+            src="png/closeBasket.png"
+            alt="Warenkorb schließen"
+            onclick="closeBasket()"
+          />
+        </div>
+        <div id="emptyBasketContainer" class="emptyBasketContainer">
+          <h2>
+            Warenkorb leer
+            <img
+              class="sadBasketPng"
+              src="png/sad.png"
+              alt="Trauriges Smiley"
+            />
+          </h2>
+          Wähle nun das Gericht deiner Wahl und freue dich auf den Genuss!
+        </div>
+      </div>
+      <div id="basketContainerFull" class="basketContainerFull">
+        <div class="basketFirstHeadlineAndCloseBasketPngContainer">
+          <h2 class="basketFirstHeadline">Warenkorb</h2>
+          <img
+            onclick="closeBasket()"
+            class="closeBasketPng"
+            src="png/closeBasket.png"
+            alt="Warenkorb schließen"
+          />
+        </div>
+        <div id="fullBasketContainer"></div>
+
+        <div class="priceAndDeliveryContainer">
+          <div class="priceContainer">
+            <h4>Preis:</h4>
+            <div id="sum"></div>
+          </div>
+          <div class="deliveryContainer">
+            <h4>Lieferkosten:</h4>
+            <div>3,00€</div>
+          </div>
+          <div class="finalPriceContainer">
+            <h4>Gesamtpreis:</h4>
+            <div id="finalSum"></div>
+          </div>
+          <div class="orderButtonContainer">
+            <button
+              id="orderButton"
+              class="orderButton draw-border"
+              onclick="placeOrder()"
+            >
+              Jetzt Bestellen
+            </button>
+            <div
+              id="orderCheckPngAndOrderFeedback"
+              class="orderCheckPngAndOrderFeedbackContainer d-none"
+            >
+              <img
+                id="orderCheckPng"
+                class="orderCheckPng"
+                src="png/orderCheck.png"
+                alt="Bestellung erfolgreich"
+              />
+              <span class="orderFeedback">Bestellung erfolgreich!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <footer>
+      Kontakt, Rechtliches, etc. 
+    </footer> -->
+  </body>
+</html>
